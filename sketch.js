@@ -38,6 +38,8 @@ function setup(){
 
     bird = new Bird(200,50);
 
+   // console.log(pig1.body);
+
     //log6 = new Log(230,180,80, PI/2);
     slingshot = new SlingShot(bird.body,{x:200, y:50});
 }
@@ -74,4 +76,10 @@ function mouseDragged(){
 
 function mouseReleased(){
     slingshot.fly();
+}
+
+function keyPressed(){
+    if (keyCode === 32){
+        slingshot.attach(bird.body);
+    }
 }
